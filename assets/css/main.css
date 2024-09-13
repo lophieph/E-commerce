@@ -1,6 +1,6 @@
 .header {
     height: 120px;
-    background-image: linear-gradient(0, #080808, #313131);
+    background-image: linear-gradient(0,  #313131, #080808);
 }
 
 .header__navbar {
@@ -11,6 +11,12 @@
 .header__navbar-list {
     list-style: none;
     padding-left: 0;
+    margin-top: 10px;
+}
+
+.header__navbar-item {
+    margin: 0 8px;
+    position: relative;
 }
 
 .header__navbar-item,
@@ -21,3 +27,30 @@
     text-decoration: none;
     font-weight: 300;
 }
+
+.header__navbar-item:hover,
+.header__navbar-item-link:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, .5);
+}
+
+.header__navbar-item--strong {
+    font-weight: 400px;
+}
+
+.header__navbar-item--separate::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 1px solid white;
+    height: 14px;
+    right: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header__navbar-icon-link {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
